@@ -4,9 +4,8 @@ class TadpolesController < ApplicationController
   before_action :set_tadpole, only: [:show, :edit, :update, :destroy, :metamorphose]
 
   def metamorphose
-    # binding.pry
-    @frog = Frog.new(@tadpole.attributes)
     binding.pry
+    @frog = Frog.new(@tadpole.attributes)
     if @frog.save
       binding.pry
       @tadpole.destroy
