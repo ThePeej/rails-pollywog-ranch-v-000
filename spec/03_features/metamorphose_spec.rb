@@ -13,6 +13,7 @@ describe "Metamorphose" do
   end
 
   it "can click on the button and the tadpole becomes a frog" do
+    binding.pry
     click_button('Become a frog')
     binding.pry
 
