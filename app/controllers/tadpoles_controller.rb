@@ -3,6 +3,8 @@ class TadpolesController < ApplicationController
 
   def metamorphose
     tadpole = Tadpole.find(params[:id])
+    @frog = Frog.new
+    @frog.name =
 
   def index
     @tadpoles = Tadpole.all
