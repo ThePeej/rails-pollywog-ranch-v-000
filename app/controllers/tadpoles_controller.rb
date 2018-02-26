@@ -5,7 +5,7 @@ class TadpolesController < ApplicationController
 
   def metamorphose
     binding.pry
-    @frog = Frog.new(@tadpole.attributes)
+    @frog = Frog.new(name: @tadpole.name, color: @tadpole.color, pond: @tadpole.pond)
     if @frog.save
       binding.pry
       @tadpole.destroy
