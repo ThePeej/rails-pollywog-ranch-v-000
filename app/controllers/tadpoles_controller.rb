@@ -3,8 +3,12 @@ class TadpolesController < ApplicationController
 
   def metamorphose
     @frog = Frog.new(@tadpole.attributes)
-    @tadpole.destroy
-    redirect_to frog_path(@frog)
+    if @frog.save
+      @tadpole.destroy
+      redirect_to frog_path(@frog)
+    else
+      render :show
+    end
   end
 
   def index
