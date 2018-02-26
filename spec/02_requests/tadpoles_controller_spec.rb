@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'pry'
 
 describe TadpolesController, :type => :request  do
   before(:each) do
