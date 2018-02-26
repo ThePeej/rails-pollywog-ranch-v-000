@@ -3,6 +3,7 @@ class TadpolesController < ApplicationController
 
   def metamorphose
     @frog = Frog.new(@tadpole.attributes)
+    pry
     if @frog.save
       @tadpole.destroy
       redirect_to frog_path(@frog)
