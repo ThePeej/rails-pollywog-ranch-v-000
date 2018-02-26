@@ -6,7 +6,6 @@ class TadpolesController < ApplicationController
   def metamorphose
     binding.pry
     @frog = Frog.new(@tadpole.attributes)
-
     if @frog.save
       @tadpole.destroy
       redirect_to frog_path(@frog)
