@@ -5,7 +5,7 @@
   <!-- the form should post to /tadpoles/:id/metamorphose -->
   <form action="/tadpoles/<%=@tadpole.id%>/metamorphose" method="POST">
     <input type="submit" value="Become a frog"/>
-  </form> 
+  </form>
 
   <p>Color: <%= @tadpole.color %></p>
   <p>Parent: <a href="/frogs/<%= @tadpole.frog.id %>"><%= @tadpole.frog.name %></a></p>
