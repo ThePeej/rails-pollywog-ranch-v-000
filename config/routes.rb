@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   # resources
   resources :ponds
+  resources :tadpoles
+
 
   # nested resources
   resources :frogs do
